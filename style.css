@@ -1,0 +1,356 @@
+    body{
+        overflow-x: hidden;
+    }
+    #wallpaper {
+        cursor: url("face/1.png");
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.712));
+        transition: 0.3s;
+    }  
+    #real-nav{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 172.8px; 
+        justify-content: flex-end;
+        padding-right: 180px;
+        background-color: white;
+        z-index: 22;
+        transition: transform 1s;
+        transform: translateY(-172.8px);
+    }
+    
+    .nav-item{
+        text-align: center;
+        width: 100px;
+    }
+    .nav-link{
+        font-family: 'Montserrat', sans-serif;
+        color: black;
+        font-weight: 800;
+        font-size: 13px;
+        text-align: center;
+        width: 100px;
+        transform: scale(1);
+        transition: all 0.4s;
+    }
+    .nav-item::before{
+        position: absolute;
+        top: 86.3px;
+        content: "";
+        width: 0px;
+        height: 1px;
+        background-color: black;
+        display: block;
+        transform: scale(1); 
+        transition: all 0.4s ;
+    }
+    .nav-item:hover::before{
+        width: 100px; 
+    }
+    .nav-link:hover {
+        color:black;   
+        transform: scale(1.2); 
+        transition: all 0.4s ;
+    }
+    
+    .pseudo-nav{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 172.8px; 
+    }
+    .logo{
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        margin-top: -28px;
+        height: 56px;
+        width: 170px;
+    }
+    #logo1, .logo-text1{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        text-align: center;
+        color: white;
+        margin-top: 9px;text-decoration: none; 
+    }
+    #logo2, .logo-text2{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        text-align: center;
+        color: black;
+        margin-top: 9px;text-decoration: none;transition: ease 0.5s;
+    }
+    .hamburger{
+        position: absolute;
+        top: 50%;
+        right: 130px;
+        margin-top:-22.5px;
+    }
+    .fa{
+        color: whitesmoke;
+        border-width: 1px;
+        border-radius: 0px;
+    }
+    #frame {
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        opacity: 0;
+        margin-left: -68.25px;
+        animation: face 0s 0s;
+        cursor: pointer;
+        animation-fill-mode: forwards;
+        background-color: rgba(0, 0, 0, 0);
+        overflow: hidden;
+        z-index: -99;
+        animation: faceAnim 5s 1.5s both;
+    }
+
+    #face {
+        width: 130px; 
+        transition: 0.5s;
+        cursor: default;
+    }
+
+    #frame:hover #face {
+        transition: 0.2s ease-in;
+        transform: scale(1.07);
+        filter: blur(2px);
+    }
+    
+    #heading0 {
+        position: absolute;
+        top: 330px;
+        left: 50%;
+        margin-left: -334.6px;
+        text-align: center;
+        font-size: 350%;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        opacity: 0;
+        transform: scale(1.4);
+        animation: name1 5s;
+        animation-fill-mode: forwards;
+    }
+  #heading1 {
+      position: absolute;
+      top: 330px;
+      left: 50%;
+      margin-left: -45px;
+      text-align: center;
+      font-size: 350%;
+      color: lavender;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(1.4);
+      animation: name1 5s, color 20s both infinite;
+      animation-fill-mode: forwards;
+  }
+  
+  #heading2 {
+      position: absolute;
+      top: 415px;
+      left: 50%;
+      margin-left: -162.46px;
+      font-size: 2.5em;
+      font-weight: 200;
+      opacity: 0;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      animation: name2 2.5s 1s;
+      animation-fill-mode: forwards;
+  }
+  .social{
+      display: inline-flex;
+      position: absolute;
+      top: 480px;
+      left: 50%;
+      margin-left: -200px;
+  }
+.gmail, .github,.linkedin,.instagram, .facebook{
+    background-color: rgb(80, 80, 80);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-width: 0px;
+    margin: 15px;
+    transition: all .5s;
+    outline: none;
+}
+.gmail:focus,.github:focus,.linkedin:focus,.instagram:focus, .facebook:focus{
+    outline: none;
+}
+.gmail:hover{
+    background-color: #B23121;
+    animation: social-jump 0.7s;
+}
+.github:hover{
+    background-color: black;
+    animation: social-jump 0.7s;
+}
+.linkedin:hover{
+    background-color: #0077b5;
+    animation: social-jump 0.7s;
+}
+.instagram:hover{
+    background-color: #C13584;
+    animation: social-jump 0.7s;
+}
+.facebook:hover{
+    background-color: #3b5998; 
+    animation: social-jump 0.7s;
+}
+@keyframes social-jump{
+    16%{
+        transform: translateY(-6px);
+    }
+    32%{
+        transform: translateY(0px);
+    }
+    48%{
+        transform: translateY(-4px);
+    }
+    64%{
+        transform: translateY(0px);
+    }
+    80%{
+        transform: translateY(-2px);
+    }
+    96%{
+        transform: translateY(0px);
+    }
+}
+  
+  
+  /* Animations */
+  
+
+  @keyframes name1 {
+      from {
+          opacity: 0%;
+          transform: translateY(40px);
+      }
+      50% {
+          transform: scale(1.4);
+      }
+      100% {
+          transform: scale(1.4);
+          opacity: 100%;
+      }
+  }
+  @keyframes name2 {
+      from {
+          opacity: 0%;
+          transform: translateY(-40px);
+      }
+      50% {
+          transform: scale(1.05);
+      }
+      100% {
+          transform: scale(1.05);
+          opacity: 100%;
+      }
+  }
+  @keyframes color{
+      0%{
+        color: rgb(163, 238, 163);
+      }
+      25%{
+        color: white;
+      }
+      50%{
+        color: rgb(173, 236, 245);
+      }
+      75%{
+        color: rgb(201, 169, 223);
+      }
+      98%{
+        color: rgb(235, 179, 179);
+      }
+      100%{
+        color: rgb(163, 238, 163);
+      }
+  }
+  
+  @keyframes faceAnim {
+      from {
+          opacity: 0%;
+      }
+      50% {
+          transform: scale(1.05);
+      }
+      100% {
+          transform: scale(1.05);
+          opacity: 100%;
+      }
+  }
+  @keyframes resize{
+      50%{
+          transform: scale(1.85);
+      }
+  }
+  
+  
+  /* Media Query */
+  
+  @media screen and (max-width: 600px) {
+      #cloud1 {
+          display: none;
+      }
+      #cloud2 {
+          display: none;
+      }
+      #heading0 {
+        position: absolute;
+        top: 365px;
+        left: 50%;
+        margin-left: -134.6px;
+        text-align: center;
+        font-size: 150%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        opacity: 0;
+        transform: scale(1.4);
+        animation: name1 5s;
+        animation-fill-mode: forwards;
+    }
+  #heading1 {
+      position: absolute;
+      top: 365px;
+      left: 50%;
+      margin-left: -10px;
+      text-align: center;
+      font-size: 150%;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(1.4);
+      animation: name1 5s;
+      animation-fill-mode: forwards;
+  }
+  #heading2{
+      margin-left: -129px;
+      font-size: 2em;
+  }
+  
+      #frame {
+          position: absolute;
+          top: 34px;
+          left: 50%;
+          opacity: 0;
+          margin-left: -65.25px;
+          animation: face 5s 2s;
+          cursor: pointer;
+          animation-fill-mode: forwards;
+          background-color: black;
+          overflow: hidden;
+      }
+  }
+  

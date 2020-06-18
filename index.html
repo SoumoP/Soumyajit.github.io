@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soumo.p</title>
+    <!--Fonts-->
+    <script src="https://use.fontawesome.com/e51dbfb6de.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@900&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    
+        <!--Pseudo Navbar-->
+        <div class="pseudo-nav">
+            <div class="logo">
+                <h3 class="logo-text1"><a href="index.html" id="logo1"><i>soumo.p</i></a></h3>
+            </div>
+            <div class="hamburger">
+                <i class="fa fa-bars fa-2x fa-border"aria-hidden="true"></i> 
+            </div>
+        </div>
+        <!--Navbar-->
+        <div class="real-nav">
+            <nav class="navbar navbar-expand-sm bg-light" id="real-nav">
+                <ul class="navbar-nav">
+                <li>
+                    <div class="logo">
+                        <h3 class="logo-text2"><a href="index.html" id="logo2"><i>soumo.p</i></a></h3>
+                    </div>
+                </li>
+                <li class="nav-item" id="nav-item">
+                    <a class="nav-link" id="nav-link" href="#">WHO AM I?</a>
+                </li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <li class="nav-item" id="nav-item">
+                    <a class="nav-link" id="nav-link"  href="#">HIT ME UP</a>
+                </li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <li class="nav-item" id="nav-item">
+                    <a class="nav-link" id="nav-link"  href="https://github.com/SoumoP?tab=repositories" target="_black">MY WORKS</a>
+                </li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <li class="nav-item" id="nav-item">
+                    <a class="nav-link" id="nav-link"  href="#">RÉSUMÉ</a>
+                </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="wallpaper">
+        <section class="header">
+            <h1 id="heading0" >Hi, I'm </h1><h1 id="heading1">Soumyajit</h1>
+        </section>
+        <section>
+            <h3 id="heading2">a procrastinator</h3>
+        </section>
+        <section>
+            <center><div class="facebox" id="frame"><img src="face/4.png" alt="" id="face"></div></center>
+        </section>
+        <section>
+            <div class="social">
+                <a href="mailto:poddersoumyajit@gmail.com" target="_blank"><button class="gmail">
+                    <i class="fa fa-envelope" id="gmail" aria-hidden="true"></i>
+                </button></a>
+                <a href="https://github.com/SoumoP" target="_blank"><button class="github">
+                    <i class="fa fa-github" id="github" aria-hidden="true"></i>
+                </button></a>
+                <a href="https://www.linkedin.com/in/soumop/" target="_blank"><button class="linkedin">
+                    <i class="fa fa-linkedin" id="linkedin" aria-hidden="true"></i>
+                </button></a>
+                <a href="https://www.instagram.com/soumo.p_/" target="_blank"><button class="instagram">
+                    <i class="fa fa-instagram" id="instagram" aria-hidden="true"></i>
+                </button></a>
+                <a href="https://www.facebook.com/soumo.pr" target="_blank"><button class="facebook">
+                    <i class="fa fa-facebook" id="facebook" aria-hidden="true"></i>
+                </button></a>
+        </section>
+    </div>
+    <!--Bootstrap CDN link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('mousemove', function(e){
+            var xCoord=e.x;
+            var yCoord=e.y;
+            if(yCoord < 112)
+            {
+                var realNav = document.getElementById("real-nav");
+                realNav.style.transform= "translateY(0px)";
+                var frame = document.getElementById("face");
+                frame.style.opacity = "0%";
+                var heading = document.getElementById("heading0");
+                heading.style.transform= "translateY(-60px)";
+                var blur = document.getElementById("wallpaper");
+                blur.style.filter= "blur(4px)";
+            }
+            else{
+                var realNav = document.getElementById("real-nav");
+                realNav.style.transform= "translateY(-172.8px)";
+                var frame = document.getElementById("face");
+                frame.style.opacity ="100%";
+                var blur = document.getElementById("wallpaper");
+                blur.style.filter= "blur(0px)";
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>
