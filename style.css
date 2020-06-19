@@ -10,6 +10,7 @@
         background-image: url(bg3.jpg);
         background-size: cover;
         transition: 0.3s;
+        
     }  
     #real-nav{
         position: absolute;
@@ -20,7 +21,7 @@
         padding-right: 180px;
         background-color: white;
         z-index: 22;
-        transition: transform 0.5s;
+        transition: transform 0.3s;
         transform: translateY(-172.8px);
     }
     
@@ -396,9 +397,14 @@
     transform: translateY(-250px);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    border-width: 1px;
+    border-color: black;
+    
 }
 .navbar-nav{
     width: 100%;
     align-items: center;
 }
+
+
 }
