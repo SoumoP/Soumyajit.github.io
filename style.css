@@ -123,9 +123,6 @@
         transform: scale(1.07);
         filter: blur(2px);
     }
-    #hi{
-        
-    }
     #heading0 {
         position: absolute;
         top: 330px;
@@ -166,6 +163,7 @@
       margin-left: -162.46px;
       font-size: 2.5em;
       font-weight: 200;
+      text-align: left;
       opacity: 0;
       color: white;
       font-family: 'Montserrat', sans-serif;
@@ -178,6 +176,8 @@
       top: 480px;
       left: 50%;
       margin-left: -200px;
+      animation: name2 2.5s 1s;
+      animation-fill-mode: both;
   }
 .gmail, .github,.linkedin,.instagram, .facebook{
     background-color: rgb(80, 80, 80);
@@ -212,26 +212,7 @@
     background-color: #3b5998; 
     animation: social-jump 0.7s;
 }
-@keyframes social-jump{
-    16%{
-        transform: translateY(-6px);
-    }
-    32%{
-        transform: translateY(0px);
-    }
-    48%{
-        transform: translateY(-4px);
-    }
-    64%{
-        transform: translateY(0px);
-    }
-    80%{
-        transform: translateY(-2px);
-    }
-    96%{
-        transform: translateY(0px);
-    }
-}
+
   
   
   /* Animations */
@@ -301,22 +282,38 @@
           transform: scale(1.85);
       }
   }
-  
+  @keyframes social-jump{
+    16%{
+        transform: translateY(-6px);
+    }
+    32%{
+        transform: translateY(0px);
+    }
+    48%{
+        transform: translateY(-4px);
+    }
+    64%{
+        transform: translateY(0px);
+    }
+    80%{
+        transform: translateY(-2px);
+    }
+    96%{
+        transform: translateY(0px);
+    }
+}
   
   /* Media Query */
   
   @media screen and (max-width: 600px) {
-      #cloud1 {
-          display: none;
-      }
-      #cloud2 {
-          display: none;
-      }
+     body{
+         overflow-x: hidden;
+     } 
       #heading0 {
         position: absolute;
-        top: 365px;
+        top: 415px;
         left: 50%;
-        margin-left: -134.6px;
+        margin-left: -120px;
         text-align: center;
         font-size: 150%;
         font-family: 'Montserrat', sans-serif;
@@ -328,34 +325,77 @@
     }
   #heading1 {
       position: absolute;
-      top: 365px;
+      top: 415px;
       left: 50%;
-      margin-left: -10px;
+      margin-left: -27px;
       text-align: center;
       font-size: 150%;
       font-family: 'Montserrat', sans-serif;
       font-weight: 900;
       opacity: 0;
       transform: scale(1.4);
-      animation: name1 5s;
+      animation: name1 5s, color 15s both infinite;
       animation-fill-mode: forwards;
   }
   #heading2{
-      margin-left: -129px;
+      top: 455px;
+      margin-left: -123px;
       font-size: 2em;
   }
   
+     
       #frame {
-          position: absolute;
-          top: 34px;
-          left: 50%;
-          opacity: 0;
-          margin-left: -65.25px;
-          animation: face 5s 2s;
-          cursor: pointer;
-          animation-fill-mode: forwards;
-          background-color: black;
-          overflow: hidden;
-      }
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        opacity: 0;
+        margin-left: -68.25px;
+        animation: face 0s 0s;
+        cursor: pointer;
+        animation-fill-mode: forwards;
+        background-color: rgba(0, 0, 0, 0);
+        overflow: hidden;
+        z-index: -99;
+        animation: faceAnim 5s 1.5s both;
+    }
+
+    #face {
+        width: 140px; 
+        transition: 0.5s;
+        cursor: default;
+    }
+
+
+  .social{
+      top: 520px;
+      margin-left: -150px;
   }
-  
+  .gmail, .github,.linkedin,.instagram, .facebook{
+    margin: 5px;
+}
+.logo{
+    left: 20px;
+}
+#logo2{
+    display: none;
+}
+
+.hamburger{
+    right: 50px;
+}
+.nav-item::before{
+    display: none;
+}
+#real-nav{
+    height: 230px;
+    padding-left: 50%;
+    align-items: center;
+    transform: translateY(-230px);
+}
+.navbar-nav{
+    width: 100%;
+    align-items: center;
+}
+
+
+}
