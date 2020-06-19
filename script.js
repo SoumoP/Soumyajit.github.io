@@ -23,8 +23,6 @@ window.addEventListener('mousemove', function(e){
         }
     }
     else{
-        var back = document.getElementById("wallpaper");
-        back.style.backgroundImage= "url('bg5.jpg')";
         if(yCoord < 112 && yCoord > 5)
         {
             var realNav = document.getElementById("real-nav");
