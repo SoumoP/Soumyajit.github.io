@@ -38,7 +38,7 @@ window.addEventListener('mousemove', function(e){
         }
         else{
             var realNav = document.getElementById("real-nav");
-            realNav.style.transform= "translateY(-230px)";
+            realNav.style.transform= "translateY(-250px)";
             var frame = document.getElementById("face");
             frame.style.opacity ="100%";
             var blur = document.getElementById("wallpaper");
