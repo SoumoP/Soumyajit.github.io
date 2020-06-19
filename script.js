@@ -23,20 +23,24 @@ window.addEventListener('mousemove', function(e){
         }
     }
     else{
+        var back = document.getElementById("wallpaper");
+        back.style.backgroundImage= "url('bg5.jpg')";
         if(yCoord < 112 && yCoord > 5)
         {
             var realNav = document.getElementById("real-nav");
             realNav.style.transform= "translateY(0px)";
+            realNav.style.boxShadow= "0px 10px 50px black";
             var frame = document.getElementById("face");
             frame.style.opacity = "0%";
             var heading = document.getElementById("heading0");
             heading.style.transform= "translateY(-60px)";
             var blur = document.getElementById("wallpaper");
-            blur.style.filter= "blur(3px)";
+            blur.style.filter= "blur(2px)";
         }
-        else{
+        else if(yCoord > 250){
             var realNav = document.getElementById("real-nav");
             realNav.style.transform= "translateY(-250px)";
+            realNav.style.boxShadow= "0px 0px 0px black";
             var frame = document.getElementById("face");
             frame.style.opacity ="100%";
             var blur = document.getElementById("wallpaper");
