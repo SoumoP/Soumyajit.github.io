@@ -7,7 +7,8 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.712));
+        background-image: url(bg2.jpg);
+        background-size: cover;
         transition: 0.3s;
     }  
     #real-nav{
@@ -19,7 +20,7 @@
         padding-right: 180px;
         background-color: white;
         z-index: 22;
-        transition: transform 1s;
+        transition: transform 0.5s;
         transform: translateY(-172.8px);
     }
     
@@ -122,12 +123,14 @@
         transform: scale(1.07);
         filter: blur(2px);
     }
-    
+    #hi{
+        
+    }
     #heading0 {
         position: absolute;
         top: 330px;
         left: 50%;
-        margin-left: -334.6px;
+        margin-left: -280px;
         text-align: center;
         font-size: 350%;
         color: white;
@@ -137,12 +140,13 @@
         transform: scale(1.4);
         animation: name1 5s;
         animation-fill-mode: forwards;
+        transform-origin: right;
     }
   #heading1 {
       position: absolute;
       top: 330px;
       left: 50%;
-      margin-left: -45px;
+      margin-left: -85px;
       text-align: center;
       font-size: 350%;
       color: lavender;
@@ -152,6 +156,7 @@
       transform: scale(1.4);
       animation: name1 5s, color 20s both infinite;
       animation-fill-mode: forwards;
+      transform-origin: left;
   }
   
   #heading2 {

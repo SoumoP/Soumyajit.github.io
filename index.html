@@ -52,7 +52,7 @@
         </div>
         <div id="wallpaper">
         <section class="header">
-            <h1 id="heading0" >Hi, I'm </h1><h1 id="heading1">Soumyajit</h1>
+            <p id="hi"><h1 id="heading0" >Hi, I'm </h1><h1 id="heading1">Soumyajit</h1></p>
         </section>
         <section>
             <h3 id="heading2">a procrastinator</h3>
@@ -88,7 +88,7 @@
         window.addEventListener('mousemove', function(e){
             var xCoord=e.x;
             var yCoord=e.y;
-            if(yCoord < 112)
+            if(yCoord < 112 && yCoord > 0)
             {
                 var realNav = document.getElementById("real-nav");
                 realNav.style.transform= "translateY(0px)";
@@ -97,7 +97,7 @@
                 var heading = document.getElementById("heading0");
                 heading.style.transform= "translateY(-60px)";
                 var blur = document.getElementById("wallpaper");
-                blur.style.filter= "blur(4px)";
+                blur.style.filter= "blur(3px)";
             }
             else{
                 var realNav = document.getElementById("real-nav");
