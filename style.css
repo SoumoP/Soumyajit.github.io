@@ -118,12 +118,13 @@
         transition: 0.5s;
         cursor: default;
     }
-
+@media screen and(min-width: 600px){
     #frame:hover #face {
         transition: 0.2s ease-in;
         transform: scale(1.07);
         filter: blur(2px);
     }
+}
     #heading0 {
         position: absolute;
         top: 330px;
