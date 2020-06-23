@@ -1,10 +1,78 @@
 body{
     margin: 0;
     padding: 0;
+    background-image: url(contact.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.wallpaper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.801);
+    z-index: 1;
+}
+#heading{
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+#heading1{
+    color: white;
+    font-family: 'Spartan', sans-serif;
+    font-size: 7em;
+    margin: 0;
+    font-weight: 900;
+    opacity: 85%;
+}
+#heading2{
+    color: white;
+    font-family: 'Spartan', sans-serif;
+    font-size: 7em;
+    margin: 0;
+    position: relative;
+    left: 350px;
+    top: -70px;
+    opacity: 65%;
 }
 .login-box{
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 20%;
+    
+}
+.inp{
+    border: none;
+    margin: 4px;
+    height: 20px;
+    width: 300px;
+    padding: 10px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.329);
+    transition: 1s;
+    color: white;
+}
+
+.inp:focus{
+    outline: none;
+    border-bottom: rgb(0, 102, 128) solid  ;
+}
+#msg{
+    height: 50px;
+    margin: 3px;
+}
+.btn{
+    height: 35px;
+    width: 100px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0.329);
+    color: white;
+    margin: 3px;
+    font-family: 'Spartan', sans-serif;
 }
