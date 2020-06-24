@@ -277,3 +277,36 @@ font-weight: 200;
         transform-origin: center;
     }
 }
+@keyframes social-jump{
+    16%{
+        transform: translateY(-6px);
+    }
+    32%{
+        transform: translateY(0px);
+    }
+    48%{
+        transform: translateY(-4px);
+    }
+    64%{
+        transform: translateY(0px);
+    }
+    80%{
+        transform: translateY(-2px);
+    }
+    96%{
+        transform: translateY(0px);
+    }
+}
+@keyframes name2 {
+    from {
+        opacity: 0%;
+        transform: translateY(-40px);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1.05);
+        opacity: 100%;
+    }
+}
