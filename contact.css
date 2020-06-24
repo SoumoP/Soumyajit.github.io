@@ -102,7 +102,9 @@ body{
 /*NavBAR ENds*/
 
 
-
+.col-md-7{
+    height: 100%;
+}
 
 
 #heading{
@@ -134,8 +136,8 @@ body{
 }
 .login-box{
     position: absolute;
-    top: 50%;
-    left: 20%;  
+    top: 52%;
+    left: 35%;  
     animation: loginBoxAnim 2s 0.5s both;
 }
 .inp{
@@ -164,6 +166,7 @@ body{
     font-size: 16px;
     opacity: 60%;
     z-index: -1;
+    transition: 0.5s;
 }
 #msg-label{
     top: -50px;
@@ -177,7 +180,7 @@ body{
 .inp:focus + #inp-label, .inp:valid + #inp-label{
     transition: 0.5s;
     opacity: 100%;
-    top: -29px;
+    top: -31px;
     font-size: 13px;
     color: rgb(0, 204, 255);
 }
@@ -197,7 +200,7 @@ body{
     border-color: white;
     background-color: rgba(0, 0, 0, 0.329);
     color: rgba(255, 255, 255, 0.849);
-    margin-top: 10px;
+    margin-top: 0px;
     font-family: 'Spartan', sans-serif;
     transition: 0.5s;
 }
