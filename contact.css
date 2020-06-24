@@ -221,17 +221,19 @@ body{
     left: 20%;
 }
 .gmail, .github,.linkedin,.instagram, .facebook{
-  background-color: rgb(80, 80, 80);
-  height: 50px;
-  width: 150px;
-  border-radius: 50px;
-  border-width: 0px;
-  margin: 15px;
-  transition: all .5s;
-  outline: none;
-  color: white;
-  font-family: 'Spartan', sans-serif;
-  font-weight: 200;
+text-align: left;
+padding-left: 20px;
+background-color: rgb(80, 80, 80);
+height: 50px;
+width: 150px;
+border-radius: 50px;
+border-width: 0px;
+margin: 15px;
+transition: all .5s;
+outline: none;
+color: white;
+font-family: 'Montserrat', sans-serif;
+font-weight: 200;
 }
 .gmail:focus,.github:focus,.linkedin:focus,.instagram:focus, .facebook:focus{
   outline: none;
@@ -256,13 +258,6 @@ body{
   background-color: #3b5998; 
   animation: social-jump 0.7s;
 }
-
-
-
-
-
-
-
 
 
 
