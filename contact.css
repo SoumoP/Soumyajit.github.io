@@ -102,7 +102,7 @@ body{
 /*NavBAR ENds*/
 
 
-.col-md-7{
+.col-md-7, .col-md-5, .row{
     height: 100%;
 }
 
@@ -128,7 +128,7 @@ body{
     font-size: 7em;
     margin: 0;
     position: relative;
-    left: 350px;
+    left: 352px;
     top: -70px;
     opacity: 65%;
     animation: headingAnim 3s 0.3s both;
@@ -136,7 +136,7 @@ body{
 }
 .login-box{
     position: absolute;
-    top: 52%;
+    top: 50%;
     left: 35%;  
     animation: loginBoxAnim 2s 0.5s both;
 }
@@ -213,11 +213,67 @@ body{
     animation: color 1s forwards;
     box-shadow: blue -3px -3px 20px inset;
 }
+
+/*Social Media*/
+.social{
+    position: relative;
+    top: 30%;
+    left: 20%;
+}
+.gmail, .github,.linkedin,.instagram, .facebook{
+  background-color: rgb(80, 80, 80);
+  height: 50px;
+  width: 150px;
+  border-radius: 50px;
+  border-width: 0px;
+  margin: 15px;
+  transition: all .5s;
+  outline: none;
+  color: white;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 200;
+}
+.gmail:focus,.github:focus,.linkedin:focus,.instagram:focus, .facebook:focus{
+  outline: none;
+}
+.gmail:hover{
+  background-color: #B23121;
+  animation: social-jump 0.7s;
+}
+.github:hover{
+  background-color: black;
+  animation: social-jump 0.7s;
+}
+.linkedin:hover{
+  background-color: #0077b5;
+  animation: social-jump 0.7s;
+}
+.instagram:hover{
+  background-color: #C13584;
+  animation: social-jump 0.7s;
+}
+.facebook:hover{
+  background-color: #3b5998; 
+  animation: social-jump 0.7s;
+}
+
+
+
+
+
+
+
+
+
+
 @keyframes headingAnim{
-    from{
+    0%{
         transform: scale(0.5);
         opacity: 0%;
         transform: translate(50px, 40px);
+    }
+    70%{
+        transform: translate(-3px, -3px);
     }
 }
 @keyframes loginBoxAnim{
