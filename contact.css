@@ -1,24 +1,114 @@
 body{
-    margin: 0;
-    padding: 0;
-    background-image: url(contact.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    overflow-x: hidden;
+    }
+#wallpaper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
     z-index: -1;
+    background-image: url(bg4.jpg);
+    background-size: cover;
+    transition: 0.3s;   
 }
-.wallpaper{
+
+/*NavBar*/
+
+#real-nav{
     position: absolute;
     top: 0;
-    left: 0;
-    height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.801);
-    z-index: 1;
+    height: 172.8px; 
+    justify-content: flex-end;
+    padding-right: 180px;
+    background-color: white;
+    z-index: 22;
+    transition: transform 0.3s;
+    transform: translateY(-172.8px);
 }
+
+.nav-item{
+    text-align: center;
+    width: 100px;
+}
+.nav-link{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 800;
+    font-size: 13px;
+    text-align: center;
+    width: 100px;
+    transform: scale(1);
+    transition: all 0.4s;
+}
+.nav-item::before{
+    position: absolute;
+    top: 86.3px;
+    content: "";
+    width: 0px;
+    height: 1px;
+    background-color: black;
+    display: block;
+    transform: scale(1); 
+    transition: all 0.4s ;
+}
+.nav-item:hover::before{
+    width: 100px; 
+}
+.nav-link:hover {
+    color:black;   
+    transform: scale(1.2); 
+    transition: all 0.4s ;
+}
+
+.pseudo-nav{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 172.8px; 
+}
+.logo{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    margin-top: -28px;
+    height: 56px;
+    width: 170px;
+}
+#logo1, .logo-text1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    text-align: center;
+    color: white;
+    margin-top: 9px;text-decoration: none; 
+}
+#logo2, .logo-text2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    text-align: center;
+    color: black;
+    margin-top: 9px;text-decoration: none;transition: ease 0.5s;
+}
+.hamburger{
+    position: absolute;
+    top: 50%;
+    right: 130px;
+    margin-top:-22.5px;
+}
+#ham{
+    color: whitesmoke;
+    border-width: 1px;
+    border-radius: 0px;
+}
+/*NavBAR ENds*/
+
+
+
+
+
 #heading{
     position: absolute;
     left: 100px;
-    top: 100px;
+    top: 160px;
 }
 #heading1{
     color: white;
@@ -27,7 +117,7 @@ body{
     margin: 0;
     font-weight: 900;
     opacity: 85%;
-    animation: headingAnim 2s 0s both;
+    animation: headingAnim 2.5s 0s both;
     transform-origin: right;
 }
 #heading2{
@@ -39,19 +129,20 @@ body{
     left: 350px;
     top: -70px;
     opacity: 65%;
-    animation: headingAnim 2s 0.3s both;
+    animation: headingAnim 3s 0.3s both;
     transform-origin: right;
 }
 .login-box{
     position: absolute;
-    top: 45%;
-    left: 20%;
+    top: 50%;
+    left: 20%;  
     animation: loginBoxAnim 2s 0.5s both;
 }
 .inp{
     border: none;
-    margin-top: 20px;
-    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    height: 45px;
     width: 300px;
     padding: 10px;
     font-family: 'Spartan', sans-serif;
@@ -59,38 +150,47 @@ body{
     background-color: rgba(0, 0, 0, 0.329);
     color: white;
     border-bottom: rgba(0, 0, 0, 0.329) solid  ;
-
+    z-index: 3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
 }
+
 #inp-label, #msg-label{
     color: white;
     position: relative;
-    top: -30px;
-    left: -320px;
+    top: 0px;
+    left: -293px;
     font-family: 'Spartan', sans-serif;
-    font-size: 13px;
+    font-size: 16px;
+    opacity: 60%;
+    z-index: -1;
 }
 #msg-label{
-    top: -45px;
+    top: -50px;
+    left: -293px;
 }
 .inp:focus{
     transition: 1s;
     outline: none;
     border-bottom: rgb(0, 204, 255) solid  ;
 }
-.inp::before{
-    content: "Hi";
-    position: relative;
-    top: 0px;
-    height: 10px;
-    width: 20px;
-    display: block;
-    color: white;
+.inp:focus + #inp-label, .inp:valid + #inp-label{
+    transition: 0.5s;
+    opacity: 100%;
+    top: -29px;
+    font-size: 13px;
+    color: rgb(0, 204, 255);
 }
-#msg{
-    height: 50px;
-    margin-top: 20px;
+
+.inp:focus + #msg-label, .inp:valid + #msg-label{
+    transition: 0.5s;
+    opacity: 100%;
+    top: -100px;
+    font-size: 13px;
+    color: rgb(0, 204, 255);
 }
-.btn{
+
+.botton{
     height: 35px;
     width: 100px;
     border-style: solid;
@@ -99,18 +199,16 @@ body{
     color: rgba(255, 255, 255, 0.849);
     margin-top: 10px;
     font-family: 'Spartan', sans-serif;
+    transition: 0.5s;
 }
-.btn:focus{
+.botton:focus{
+    background-color:rgb(0, 204, 255) ;
+    color: black;
+    border-style: solid;
+    border-color: rgb(0, 0, 100);
     outline: none;
-    animation: color 0.5s forwards;
+    animation: color 1s forwards;
     box-shadow: blue -3px -3px 20px inset;
-}
-@keyframes color {
-    to{
-        background-color:rgb(0, 204, 255) ;
-        color: black;
-        border: none;
-    }
 }
 @keyframes headingAnim{
     from{
