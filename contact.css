@@ -86,7 +86,8 @@ body{
     font-weight: 200;
     text-align: center;
     color: black;
-    margin-top: 9px;text-decoration: none;transition: ease 0.5s;
+    margin-top: 9px;text-decoration: none;
+    transition: ease 0.5s;
 }
 .hamburger{
     position: absolute;
@@ -119,7 +120,7 @@ body{
     margin: 0;
     font-weight: 900;
     opacity: 85%;
-    animation: headingAnim 2.5s 0s both;
+    animation: headingAnim 2.5s 0s both ease-in-out;
     transform-origin: right;
 }
 #heading2{
@@ -131,9 +132,10 @@ body{
     left: 352px;
     top: -70px;
     opacity: 65%;
-    animation: headingAnim 3s 0.3s both;
+    animation: headingAnim 3s 0.3s both ease-in-out;
     transform-origin: right;
 }
+
 .login-box{
     position: absolute;
     top: 50%;
@@ -215,25 +217,51 @@ body{
 }
 
 /*Social Media*/
-.social{
+.mobile{
     position: relative;
-    top: 30%;
-    left: 20%;
+    top: 300px;
+    left: 70%;
+    text-align: center;
+    color: white;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    background-color: rgb(80, 80, 80);
+    width: 25px;
+    height: 170px;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+.social{
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    margin-top: -175px;
+    left: 50%;
+    margin-left: -200px;
+    animation: name2 2.5s 1s;
+    animation-fill-mode: both;
+}
+.social-list{
+    list-style: none;
+    position: relative;
+    top: 0px;
+    left: 150px;
 }
 .gmail, .github,.linkedin,.instagram, .facebook{
-text-align: left;
-padding-left: 20px;
-background-color: rgb(80, 80, 80);
-height: 50px;
-width: 150px;
-border-radius: 50px;
-border-width: 0px;
-margin: 15px;
-transition: all .5s;
-outline: none;
-color: white;
-font-family: 'Montserrat', sans-serif;
-font-weight: 200;
+  background-color: rgb(80, 80, 80);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-width: 0px;
+  margin: 15px;
+  padding: 0;
+  transition: all .5s;
+  outline: none;
+  color: whitesmoke;
+}
+#phone{
+    transform: rotate(-30deg);
 }
 .gmail:focus,.github:focus,.linkedin:focus,.instagram:focus, .facebook:focus{
   outline: none;
@@ -261,6 +289,8 @@ font-weight: 200;
 
 
 
+/*Animations*/
+
 @keyframes headingAnim{
     0%{
         transform: scale(0.5);
@@ -271,12 +301,22 @@ font-weight: 200;
         transform: translate(-3px, -3px);
     }
 }
+@keyframes headingAnim2{
+    50%{
+        transform: translate(3px, 3px);
+    }
+    
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
 @keyframes loginBoxAnim{
     from{
         opacity: 0%;
         transform-origin: center;
     }
 }
+
 @keyframes social-jump{
     16%{
         transform: translateY(-6px);
@@ -301,12 +341,15 @@ font-weight: 200;
     from {
         opacity: 0%;
         transform: translateY(-40px);
+        transform-origin: center;
     }
     50% {
         transform: scale(1.05);
+        transform-origin: center;
     }
     100% {
         transform: scale(1.05);
         opacity: 100%;
+        transform-origin: center;
     }
 }
