@@ -102,6 +102,12 @@ body{
 }
 /*NavBAR ENds*/
 
+#my-svg{
+    position: absolute;
+    top: 25%;
+    right: 53%;
+    width: 300px;
+}
 
 .col-md-7, .col-md-5, .row{
     height: 100%;
