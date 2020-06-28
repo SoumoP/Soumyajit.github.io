@@ -359,3 +359,82 @@ body{
         transform-origin: center;
     }
 }
+
+/*animation*/
+
+@media screen and (max-width: 600px) {
+    #wallpaper{
+        overflow-y: scroll;
+    } 
+    body{
+         overflow-x: hidden;
+     } 
+     .logo{
+        left: 20px;
+    }
+    #logo2{
+        display: none;
+    }    
+    .hamburger{
+        right: 50px;
+    }
+    .nav-item::before{
+        display: none;
+    }
+    #real-nav{
+        height: 250px;
+        padding-left: 45%;
+        align-items: center;
+        transform: translateY(-250px);
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-width: 1px;
+        border-color: black;
+        
+    }
+    .navbar-nav{
+        width: 100%;
+        align-items: center;
+    }
+    #heading{
+        position: absolute;
+        left: 50px;
+        top: 160px;
+    }
+    #heading1{
+        font-size: 2.8em;
+        left: -20px;
+    } 
+    #heading2 {
+        font-size: 3em;
+        left: 132px;
+        top: -30px;
+    }
+    .login-box{
+        position: absolute;
+        top: 40%;
+        left: 15%;  
+        animation: loginBoxAnim 2s 0.5s both;
+    }
+    .inp{
+        margin-top: 0px;
+        margin-bottom: -10px;
+    }
+    #inp-label, #msg-label{
+        top: -25px;
+        left: 10px;
+    }
+    #msg-label{
+        top: -67px;
+    }
+    .col-md-7, .col-md-5, .row{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .inp:focus + #inp-label, .inp:valid + #inp-label{
+
+        top: -56px;
+
+    }
+
+}
