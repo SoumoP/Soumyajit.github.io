@@ -436,5 +436,12 @@ body{
         top: -56px;
 
     }
-
+    .social{
+        top: 520px;
+        margin-left: -150px;
+        float: left;
+    }
+    .gmail, .github,.linkedin,.instagram, .facebook{
+      margin: 5px;
+  }
 }
