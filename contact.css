@@ -365,6 +365,7 @@ body{
 @media screen and (max-width: 600px) {
     #wallpaper{
         overflow-y: scroll;
+        align-content: center;
     } 
     body{
          overflow-x: hidden;
@@ -416,6 +417,9 @@ body{
         left: 15%;  
         animation: loginBoxAnim 2s 0.5s both;
     }
+    .text-box{
+        width: 300px;
+    }
     .inp{
         margin-top: 0px;
         margin-bottom: -10px;
@@ -450,6 +454,7 @@ body{
         position: relative;
         left: 0%;
         text-align: center;
+        align-content: center;
        
     }
     .gmail, .github,.linkedin,.instagram, .facebook{
@@ -461,5 +466,26 @@ body{
     .pseudo-nav{
         background-image: linear-gradient(rgb(16, 16, 16),rgba(0, 0, 0, 0));
     }
-
+    .mobile{
+        position: relative;
+        top: 60px;
+        left: 50%;
+        margin-left: -85px;
+        text-align: center;
+        color: white;
+        background-color: rgb(80, 80, 80);
+        width: 170px;
+        height: 25px;
+        border-radius: 15px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        animation: name2 2.5s 1s;
+        animation-fill-mode: both;
+        vertical-align: middle;
+        writing-mode: horizontal-tb;
+    }
+    #phone{
+        transform: rotate(0deg);
+    }
+    
 }
