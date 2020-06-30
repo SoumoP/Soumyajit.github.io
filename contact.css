@@ -431,17 +431,27 @@ body{
         width: 100%;
         overflow-x: hidden;
     }
+    .col-md-7{
+        height: 650px;
+    }
     .inp:focus + #inp-label, .inp:valid + #inp-label{
-
         top: -56px;
-
     }
     .social{
-        top: 520px;
-        margin-left: -150px;
-        float: left;
+        position: absolute;
+        top: 180px;
+        width: 100%;
+    }
+    .social-list{
+        left: 50%;
+        padding: 0px;
+        margin-left: -166px;
     }
     .gmail, .github,.linkedin,.instagram, .facebook{
       margin: 5px;
   }
+  .social-list li{
+      display: inline;
+  }
+
 }
