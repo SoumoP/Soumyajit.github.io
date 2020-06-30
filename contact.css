@@ -453,5 +453,9 @@ body{
   .social-list li{
       display: inline;
   }
+     .pseudo-nav{
+      background-image: linear-gradient(rgb(10, 10, 10),rgb(12, 12, 12),rgba(0, 0, 0, 0));
+  }
+
 
 }
