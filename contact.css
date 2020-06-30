@@ -454,7 +454,8 @@ body{
       display: inline;
   }
      .pseudo-nav{
-      background-image: linear-gradient(rgb(10, 10, 10),rgb(12, 12, 12),rgba(0, 0, 0, 0));
+            background-image: linear-gradient(rgb(16, 16, 16),rgba(0, 0, 0, 0));
+
   }
 
 
