@@ -433,6 +433,7 @@ body{
     }
     .col-md-7{
         height: 650px;
+        top: 50px;
     }
     .inp:focus + #inp-label, .inp:valid + #inp-label{
         top: -56px;
