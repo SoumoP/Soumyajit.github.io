@@ -363,6 +363,9 @@ body{
 /*animation*/
 
 @media screen and (max-width: 600px) {
+    #my-svg{
+        display: none;
+    }
     #wallpaper{
         overflow-y: scroll;
         align-content: center;
