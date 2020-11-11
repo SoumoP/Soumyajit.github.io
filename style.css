@@ -172,6 +172,30 @@
       animation: name2 2.5s 1s;
       animation-fill-mode: forwards;
   }
+  #text1, #text2, #text3{
+    position: absolute;
+    opacity: 0;
+    top: 460px;
+ }
+ #text1{
+     
+     left: 50%;
+     transform: translate(-50%);
+     animation: move1 9s infinite both; transition: all 1s;
+ }
+ #text2{
+     
+     left: 50%;
+     transform: translate(-50%); transition: all 1s;
+     animation: move1 9s 3s infinite both;
+ }
+ #text3{
+     
+     left: 50%;
+     transform: translate(-50%);
+     animation: move1 9s 6s infinite both; transition: all 1s;
+ }
+
   .social{
       display: inline-flex;
       position: absolute;
@@ -264,6 +288,21 @@
           opacity: 100%;
       }
   }
+  @keyframes move1{
+    33%{
+        transform: translate(-50%,-40px);opacity: 100;
+    }
+    40%{ 
+        opacity: 0;
+    }
+    66%{
+        transform: translate(-50%,-100px);
+    }
+    100%{
+        transform: translate(-50%,40px);
+    }
+    
+}
   @keyframes color{
       0%{
         color: rgb(163, 238, 163);
@@ -346,28 +385,34 @@
         animation: name1 5s;
         animation-fill-mode: forwards;
     }
-  #heading1 {
-      position: absolute;
-      top: 415px;
-      left: 50%;
-      margin-left: -27px;
-      text-align: center;
-      font-size: 150%;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      opacity: 0;
-      transform: scale(1.4);
-      animation: name1 5s, color 15s both infinite;
-      animation-fill-mode: forwards;
-  }
-  #heading2{
-      top: 455px;
-      margin-left: -110px;
-      font-size: 1.7em;
-  }
-  
-     
-      #frame {
+    #heading1 {
+        position: absolute;
+        top: 415px;
+        left: 50%;
+        margin-left: -27px;
+        text-align: center;
+        font-size: 150%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        opacity: 0;
+        transform: scale(1.4);
+        animation: name1 5s, color 15s both infinite;
+        animation-fill-mode: forwards;
+    }
+    #heading2{
+        top: 455px;
+        margin-left: -110px;
+        font-size: 1.7em;
+    }
+    #text1, #text2, #text3{
+        position: absolute;
+        opacity: 0;
+        top: 510px;
+    }
+    svg{
+        height: 30px;
+    }
+    #frame {
         position: absolute;
         top: 150px;
         left: 50%;
